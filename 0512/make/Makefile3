@@ -1,0 +1,11 @@
+obj=add.o sub.o mul.o devl.o
+dest=libmymath.a
+
+$(dest):$(obj)
+	ar rcs $@ $^
+%.o:%.c
+	gcc -c $^
+
+.PHONY:clean
+clean:
+	rm -f $(obj)

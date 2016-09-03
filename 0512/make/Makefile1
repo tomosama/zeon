@@ -1,0 +1,14 @@
+libmymath.a:add.o sub.o mul.o devl.o
+	ar rcs libmymath.a add.o sub.o mul.o devl.o
+add.o:add.c
+	gcc -c add.c
+sub.o:sub.c
+	gcc -c sub.c
+mul.o:mul.c
+	gcc -c mul.c
+devl.o:devl.c
+	gcc -c devl.c
+
+.PHONY:clean
+clean:
+	rm -f add.o sub.o mul.o devl.o

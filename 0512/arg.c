@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    int i;
+
+    printf("argc = %d\n", argc);
+    for (i = 0; i < argc; i++) {
+        printf("***********\n");
+        printf("argv[%d]=%s\n", i, argv[i]);
+        printf("***********\n");
+    }
+
+    return 0;
+
+    
+}

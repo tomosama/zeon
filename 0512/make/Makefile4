@@ -1,0 +1,14 @@
+src=$(wildcard *.c)
+obj=$(patsubst %.c,%.o, $(src))
+
+dest=libmymath.a
+
+
+$(dest):$(obj)
+	ar rcs $@ $^
+%.o:%.c
+	gcc -c $^
+
+.PHONY:clean
+clean:
+	rm -f $(obj) $(dest)
